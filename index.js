@@ -9,7 +9,7 @@ function Circle(radius) {
     }
     
     this.draw = function() {
-        this.computeOptimumLocation();
+        this.computeOptimumLocation(0.1);
 
         console.log('draw');
     };
