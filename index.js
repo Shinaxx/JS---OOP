@@ -1,20 +1,20 @@
 
-// factory function
-function createCircle(radius) {
-    return {
-        radius,
-        draw: function() {
-            console.log('draw');
-        }
-    };
-}
-const circle = createCircle(1);
-
-// constructor function
 function Circle(radius) {
     this.radius = radius;
     this.draw = function() {
         console.log('draw');
     }
 }
-const another = new Circle(1);
+
+const another = new Circle(10);
+
+for (let key in circle) {
+    if (typeof circle[key] !== 'function')
+      console.log(key, circle[key]);
+}
+
+const keys = object.keys(circle);
+console.log(keys);
+
+if ('radius' in circle)
+console.log('Circle has a radius.');
